@@ -1,0 +1,237 @@
+form, button, label, input, select, option, textarea, p.textarea, p.file .info, p.file .progress {
+    -moz-box-sizing: border-box; /* ff2 */
+    -ms-box-sizing: border-box; /* ie8 */
+    -webkit-box-sizing: border-box; /* safari3 */
+    -khtml-box-sizing: border-box; /* konqueror */
+    box-sizing: border-box; /* css3 rec */
+    outline: none;
+    border: 0;
+}
+/*button, input, select, option, textarea, p.file, p.select { font-size: 15px; }*/
+form {
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 20px 25px 15px;
+    width: 100%;
+    background: #f3f3f3;
+    border: 1px solid #e5e5e5;
+}
+label { display:block; margin: 0 0 10px; }
+label b, label i , .label b , .label i { display: block;margin: 0 0 6px; }
+form i.success { 
+    display: block;
+    margin: 5px 0;
+    padding: 5px 10px 7px;
+    color: #fff;
+    background: #8c0;
+    border: 2px solid #9d2;
+}
+form i.error { 
+    display: block;
+    margin: 5px 0;
+    padding: 5px 10px 7px;
+    color: #fff;
+    background: #c40;
+    border: 2px solid #d52;
+}
+label i.error , .label i.error { padding: 0; text-align: right; font-size: smaller; }
+.label label {
+    display:inline;
+    line-height: 26px;
+    vertical-align: text-bottom;
+}
+.label p { margin:0; }
+
+label .loader, .label loader { display:none; }
+input { display: inline-block; }
+input[type="email"], input[type="password"], input[type="text"], input[type="url"], input[type="submit"], button, input[type="file"], select {
+    display: inline-block;
+    padding: 0 17px;
+    height: 45px;
+    background: url(forma-sprite.png),  url(forma-sprite.png);
+    background-repeat: no-repeat, no-repeat;  
+    background-position: top right, top left;  
+}
+
+input[type="email"], input[type="password"], input[type="text"], input[type="url"], input[type="file"], select, p.select, option {
+    width: 100%;
+}
+
+input[type="email"]:focus, input[type="password"]:focus, input[type="text"]:focus, input[type="url"]:focus,
+input[type="email"]:hover, input[type="password"]:hover, input[type="text"]:hover, input[type="url"]:hover {
+    background-position: right -50px, left -50px;  
+}
+input[type="email"].error, input[type="password"].error, input[type="text"].error, input[type="url"].error {
+    background-position: right -100px, left -100px;  
+}
+
+textarea {
+    width: 100%;
+    height: 200px;
+    background: transparent;
+    resize: none;
+    resize: vertical;
+}
+p.textarea {
+    display: inline-block;
+    padding: 15px;
+    width: 100%;
+    background: url(forma-textarea.png), url(forma-textarea.png), url(forma-textarea.png), url(forma-textarea.png);
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;  
+    background-position:  right bottom, right top, left bottom, left top;  
+}
+p.textarea.focus, p.textarea.hover {
+    background: url(forma-textarea-focus.png), url(forma-textarea-focus.png), url(forma-textarea-focus.png), url(forma-textarea-focus.png);
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;  
+    background-position:  right bottom, right top, left bottom, left top;  
+}
+p.textarea.error {
+    background: url(forma-textarea-error.png), url(forma-textarea-error.png), url(forma-textarea-error.png), url(forma-textarea-error.png);
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;  
+    background-position:  right bottom, right top, left bottom, left top;  
+}
+
+input[type="checkbox"], input[type="radio"], input[type="file"] {
+    display: inline-block;
+    opacity: 0;
+}
+p.checkbox, p.radio, p.switch {
+    position: relative;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    vertical-align: baseline;
+    background: url(forma-sprite.png);
+    background-repeat: no-repeat;  
+    background-position: left -300px;
+} 
+p.checkbox.focus { 
+    background-position: -50px -300px;
+} 
+p.checkbox.checked { 
+    background-position: -25px -300px;
+} 
+p.checkbox.checked.focus { 
+    background-position: -75px -300px;
+} 
+p.radio { 
+    background-position: -150px -300px;
+} 
+p.radio.focus { 
+    background-position: -210px -300px;
+} 
+p.radio.checked { 
+    background-position: -180px -300px;
+} 
+p.radio.checked.focus { 
+    background-position: -240px -300px;
+} 
+
+p.switch {
+    width: 100px;
+    height: 35px;
+    background: url(forma-sprite.png),url(forma-sprite.png);
+    background-repeat: no-repeat,no-repeat;  
+    background-position: -330px -300px, -595px -300px;
+    transition:all .3s ease-out;
+    -moz-transition:all .3s ease-out;
+    -webkit-transition:all .3s ease-out;
+}
+p.switch.checked {
+    width: 100px;
+    height: 35px;
+    background: url(forma-sprite.png),url(forma-sprite.png);
+    background-repeat: no-repeat,no-repeat;  
+    background-position: -330px -300px, -550px -300px;
+}
+
+
+p.file  {
+    position: relative;
+    background: url(forma-sprite.png);
+    background-repeat: no-repeat;  
+    background-position: left -650px;  
+}
+p.file .info, p.file .progress {
+    display: inline-block;
+    width: 100%;
+    height: 45px;
+}
+p.file .info {
+    color: #333;
+    text-align: right;
+    background: url(forma-sprite.png), url(forma-sprite.png);
+    background-repeat: no-repeat, no-repeat;  
+    background-position: right -500px, left -500px;  
+}
+p.file .progress {
+    width: 0;
+    background: url(forma-sprite.png);
+    background-repeat: no-repeat;  
+    background-position: 0 -700px;  
+}
+p.file b {
+    position: absolute;
+    padding: 15px 17px;
+    color: #fff;
+}
+p.file.focus .info, p.file.hover .info { 
+    background-position: right -550px, left -550px, -1800px -700px, left -650px;  
+}
+p.file.error .info { 
+    background-position: right -600px, left -600px, -1800px -700px, left -650px;  
+}
+u.attachment {
+    display: block;
+    padding: 0 22px;
+    height: 24px;
+    line-height: 24px;
+    text-decoration:none;
+    font-size: smaller;
+    background: url(forma-sprite.png) -700px -300px no-repeat;
+    overflow: hidden;
+}
+
+
+select {
+    opacity: 0;
+    margin: 0 5px;
+    padding: 0;
+}
+option { padding: 7px; }
+p.select {
+    position: relative;
+    background: url(forma-sprite.png),  url(forma-sprite.png);
+    background-repeat: no-repeat, no-repeat;  
+    background-position: right -150px, left -150px;
+} 
+p.select span {
+    position: absolute;
+    padding: 17px;
+}
+p.select.focus {  
+    background-position: right -199px, left -199px;
+} 
+p.select.error {  
+    background-position: right -250px, left -250px;
+} 
+
+input[type="submit"], button {
+    float: right;
+    margin:0;
+    padding: 0;
+    min-width: 100px;
+    text-align: center;
+    vertical-align: bottom;
+    background-position: right -340px, left -340px;
+    outline: 0;
+    color: #fff;
+    font-weight: bold;
+}
+input[type="submit"]:focus, input[type="submit"]:hover, button:focus, button:hover {
+    background-position: right -390px, left -390px;
+}
+input[type="submit"].down, button.down {
+    background-position: right -440px, left -440px;
+}
